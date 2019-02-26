@@ -1,5 +1,5 @@
 # Revamp Framework
-Framework for developing games on java
+Framework for developing games or simulations on java
 
 ## Getting Started
 Run Control as Main this will load up the default room, you can change to the next room from there.
@@ -7,9 +7,6 @@ Run Control as Main this will load up the default room, you can change to the ne
 ### Prerequisites
 -java jre 11
 -java jdk 11 
-
-### Installing
-Run the make.something on the command line
 
 ## Running the tests
 Nothing yet
