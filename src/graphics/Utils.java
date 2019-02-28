@@ -19,14 +19,14 @@ public class Utils{
 		if(panel.getWidth()<50) {
 			return 1;
 		}else {
-			return panel.getWidth()-50;
+			return panel.getWidth();
 		}
 	}
 	public int getHeight() {
 		if(panel.getHeight()<102) {
 			return 1;
 		}else {
-			return panel.getHeight()-102;
+			return panel.getHeight()-30;
 		}
 		
 	}

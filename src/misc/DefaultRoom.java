@@ -1,27 +1,27 @@
-package test;
+package misc;
 
 import java.awt.Graphics2D;
 
-public class ButtonO extends graphics.ObjectG{
+public class DefaultRoom extends graphics.RoomG{
 	//===================================================================CONSTANTS
 	//===================================================================VARIABLES
 	int x;
 	int y;
-	int vX = (new java.util.Random()).nextInt(3)-1;
-	int vY = (new java.util.Random()).nextInt(3)-1;
+	int vX = 1;
+	int vY = 1;
 	boolean dir= true;
 	int type;
 	//====================================================================CONSTRUCTORS
-	public ButtonO() {
-		x = (new java.util.Random()).nextInt(graphics.getWidth());
-		y = (new java.util.Random()).nextInt(graphics.getHeight());
+	public DefaultRoom() {
+		x = 0;
+		y = 0;
 	}
 	//====================================================================FUNCTIONS
 	protected void tick(float deltaT){
-		if(x>graphics.getWidth() || x<0) {
+		if(x+150>=graphics.getWidth() || x<0) {
 		  vX = -vX;
 		}
-		if(y>graphics.getHeight() || y<0) {
+		if(y+150>=graphics.getHeight() || y<0) {
 			  vY = -vY;
 		}
 		x += vX;
@@ -29,6 +29,11 @@ public class ButtonO extends graphics.ObjectG{
 	}
 	@Override
 	protected void paint(Graphics2D g2D) {
-		g2D.drawRect(x, y, 50, 70);
+		g2D.drawRect(x, y, 150, 150);
+		g2D.drawString("Revamp Framework",x+10, y+40);
+		g2D.drawString("DEFAULT ROOM",x+10, y+80);
+		g2D.drawString("TPS:"+core.getTPS(),x+10, y+130);
+		
 	}
 }
+
